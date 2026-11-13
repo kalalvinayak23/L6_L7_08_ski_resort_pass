@@ -1,0 +1,23 @@
+Vinayak Yuvraj Kalal | PES2UG25AM809
+Python 3.12.14 | Executed 13 November 2026
+
+$ python -m coverage run --branch --source=ski_resort_pass -m pytest BranchCoverageTest_ski_resort_pass.py -q
+...............................................                                              [100%]
+47 passed in 0.12s
+
+Exit code: 0
+
+$ python -m coverage report -m --fail-under=90
+Name                 Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------
+ski_resort_pass.py      59      0     42      0   100%
+----------------------------------------------------------------
+TOTAL                   59      0     42      0   100%
+
+Exit code: 0
+
+$ python -m coverage json -o evidence/branch_coverage.json
+Wrote JSON report to evidence/branch_coverage.json
+
+Exit code: 0
+
