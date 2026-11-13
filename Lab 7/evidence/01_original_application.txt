@@ -1,0 +1,22 @@
+Vinayak Yuvraj Kalal | PES2UG25AM809
+Python 3.12.14 | Executed 13 November 2026
+
+$ python processor.py
+Input supplied (one answer per prompt): '2026/12/31\n1:0\nBEG\n'
+==== Running parse_season_pass_validity ====
+Enter pass expiry (YYYY/MM/DD): Pass Expiry: 2026-12-31 (VALID)
+
+==== Running compute_trail_gradient ====
+Enter drop:distance (e.g. 250:1000): Traceback (most recent call last):
+  File "/workspace/scratch/20bcaf4a6edb/repo/Lab 7/processor.py", line 40, in <module>
+    main()
+  File "/workspace/scratch/20bcaf4a6edb/repo/Lab 7/processor.py", line 33, in main
+    print("Gradient %:", compute_trail_gradient(e_input))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/20bcaf4a6edb/repo/Lab 7/processor.py", line 13, in compute_trail_gradient
+    gradient_pct = (drop / distance) * 100.0
+                    ~~~~~^~~~~~~~~~
+ZeroDivisionError: float division by zero
+
+Exit code: 1
+

@@ -1,0 +1,71 @@
+Vinayak Yuvraj Kalal | PES2UG25AM809
+Python 3.12.14 | Executed 13 November 2026
+
+$ python -m pytest test_processor.py -k no_crash or safe -q --tb=short
+FFF                                                                                          [100%]
+============================================= FAILURES =============================================
+_____________________________ test_parse_season_pass_validity_no_crash _____________________________
+test_processor.py:21: in test_parse_season_pass_validity_no_crash
+    result = parse_season_pass_validity(value)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+processor.py:2: in parse_season_pass_validity
+    parts = date_str.split('/')
+            ^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+
+During handling of the above exception, another exception occurred:
+test_processor.py:18: in test_parse_season_pass_validity_no_crash
+    @given(UNEXPECTED)
+                   ^^^
+test_processor.py:23: in test_parse_season_pass_validity_no_crash
+    pytest.fail(f"Unhandled {type(exc).__name__} for {value!r}: {exc}")
+E   Failed: Unhandled AttributeError for None: 'NoneType' object has no attribute 'split'
+E   Failing test case: test_parse_season_pass_validity_no_crash(
+E       value=None,
+E   )
+_________________________________ test_compute_trail_gradient_safe _________________________________
+test_processor.py:32: in test_compute_trail_gradient_safe
+    result = compute_trail_gradient(value)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+processor.py:10: in compute_trail_gradient
+    drop_str, dist_str = elevation_str.split(':')
+                         ^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+
+During handling of the above exception, another exception occurred:
+test_processor.py:29: in test_compute_trail_gradient_safe
+    @given(UNEXPECTED)
+                   ^^^
+test_processor.py:34: in test_compute_trail_gradient_safe
+    pytest.fail(f"Unhandled {type(exc).__name__} for {value!r}: {exc}")
+E   Failed: Unhandled AttributeError for None: 'NoneType' object has no attribute 'split'
+E   Failing test case: test_compute_trail_gradient_safe(
+E       value=None,
+E   )
+_______________________________ test_calculate_lift_access_tier_safe _______________________________
+test_processor.py:43: in test_calculate_lift_access_tier_safe
+    result = calculate_lift_access_tier(value)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+processor.py:17: in calculate_lift_access_tier
+    prefix = zone_code.strip().upper()[:3]
+             ^^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'strip'
+
+During handling of the above exception, another exception occurred:
+test_processor.py:40: in test_calculate_lift_access_tier_safe
+    @given(UNEXPECTED)
+                   ^^^
+test_processor.py:45: in test_calculate_lift_access_tier_safe
+    pytest.fail(f"Unhandled {type(exc).__name__} for {value!r}: {exc}")
+E   Failed: Unhandled AttributeError for None: 'NoneType' object has no attribute 'strip'
+E   Failing test case: test_calculate_lift_access_tier_safe(
+E       value=None,
+E   )
+===================================== short test summary info ======================================
+FAILED test_processor.py::test_parse_season_pass_validity_no_crash - Failed: Unhandled AttributeE...
+FAILED test_processor.py::test_compute_trail_gradient_safe - Failed: Unhandled AttributeError for...
+FAILED test_processor.py::test_calculate_lift_access_tier_safe - Failed: Unhandled AttributeError...
+3 failed, 41 deselected in 2.95s
+
+Exit code: 1
+
