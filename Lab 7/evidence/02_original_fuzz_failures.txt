@@ -1,7 +1,7 @@
 Vinayak Yuvraj Kalal | PES2UG25AM809
-Python 3.12.14 | Executed 13 November 2026
+Python 3.12.14 | 13 November 2026
 
-$ python -m pytest test_processor.py -k no_crash or safe -q --tb=short
+$ python -m pytest test_processor.py -k 'no_crash or safe' -q --tb=short
 FFF                                                                                          [100%]
 ============================================= FAILURES =============================================
 _____________________________ test_parse_season_pass_validity_no_crash _____________________________
@@ -65,7 +65,7 @@ E   )
 FAILED test_processor.py::test_parse_season_pass_validity_no_crash - Failed: Unhandled AttributeE...
 FAILED test_processor.py::test_compute_trail_gradient_safe - Failed: Unhandled AttributeError for...
 FAILED test_processor.py::test_calculate_lift_access_tier_safe - Failed: Unhandled AttributeError...
-3 failed, 41 deselected in 2.95s
+3 failed, 41 deselected in 4.86s
 
 Exit code: 1
 

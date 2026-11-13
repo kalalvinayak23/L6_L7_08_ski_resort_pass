@@ -1,8 +1,8 @@
 Vinayak Yuvraj Kalal | PES2UG25AM809
-Python 3.12.14 | Executed 13 November 2026
+Python 3.12.14 | 13 November 2026
 
 $ python processor.py
-Input supplied (one answer per prompt): '2026/12/31\n250:1000\nBEG\n'
+Input supplied: '2026/12/31\n250:1000\nBEG\n'
 ==== Running parse_season_pass_validity ====
 Enter pass expiry (YYYY/MM/DD): Pass Expiry: 2026-12-31 (VALID)
 
@@ -15,7 +15,7 @@ Enter zone code (e.g. BEG, INT, ALL): Lift Pass Price: $ 35.00
 Exit code: 0
 
 $ python processor.py
-Input supplied (one answer per prompt): 'bad\n1:0\nXYZ\n'
+Input supplied: 'bad\n1:0\nXYZ\n'
 ==== Running parse_season_pass_validity ====
 Enter pass expiry (YYYY/MM/DD): INVALID_DATE
 
